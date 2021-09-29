@@ -5,6 +5,11 @@ const closeModalBtn = document.querySelector(".close-modal");
 const overlay = document.querySelector(".overlay");
 const showModalBtns = document.querySelectorAll(".show-modal");
 
+document.addEventListener("keyup", (e) => {
+  if (e.key === "Escape") {
+    !modal.classList.contains("hidden") && closeModal();
+  }
+});
 showModalBtns.forEach((showModalBtn) => {
   showModalBtn.addEventListener("click", openModal);
 });
