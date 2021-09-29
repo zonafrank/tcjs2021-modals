@@ -12,7 +12,10 @@ showModalBtns.forEach((showModalBtn) => {
   });
 });
 
-closeModalBtn.addEventListener("click", () => {
+closeModalBtn.addEventListener("click", closeModal);
+overlay.addEventListener("click", closeModal);
+
+function closeModal() {
   modal.classList.add("hidden");
   overlay.classList.add("hidden");
-});
+}
